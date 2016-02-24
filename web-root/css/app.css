@@ -407,11 +407,18 @@
   background-color: rgba(0, 0, 0, 0.5); }
 
 /* Spacing */
+.no-margin {
+  margin: 0 auto; }
+
+.no-padding {
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin: 0; }
 
 ul, ol {
@@ -421,12 +428,26 @@ ul, ol {
 .menu-icon {
   margin: 0.5rem; }
 
-header h1 {
+header h1, header h2, header h3, header h4 {
   padding: 0;
   margin: 0; }
 
 header .logo {
   margin-top: 1rem;
   margin-bottom: 1rem; }
+
+main {
+  padding-bottom: 4rem; }
+
+.text-content {
+  max-width: 35rem;
+  margin: 0; }
+
+.text-content h1 {
+  font-size: 2rem; }
+
+/* General */
+.italics {
+  font-style: italic; }
 
 /*# sourceMappingURL=app.css.map */

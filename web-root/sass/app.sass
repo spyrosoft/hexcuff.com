@@ -157,11 +157,18 @@ h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
 
 /* Spacing
 
+.no-margin
+	margin: 0 auto
+
+.no-padding
+	padding: 0
+
 h1, h2, h3, h4, h5, h6
 	line-height: 100%
 
 h1, h2, h3, h4, h5, h6
-	padding: $medium-spacing
+	padding-top: $small-spacing
+	padding-bottom: $small-spacing
 	margin: 0
 
 ul, ol
@@ -171,10 +178,27 @@ ul, ol
 .menu-icon
 	margin: 0.5rem
 
-header h1
-	padding: 0
-	margin: 0
+header
+	h1, h2, h3, h4
+		padding: 0
+		margin: 0
 
 header .logo
 	margin-top: $small-spacing
 	margin-bottom: $small-spacing
+
+main
+	padding-bottom: $large-spacing
+
+.text-content
+	max-width: 35rem
+	margin: 0
+
+.text-content h1
+	font-size: 2rem
+
+
+/* General
+
+.italics
+	font-style: italic
