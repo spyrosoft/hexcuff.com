@@ -121,6 +121,9 @@
 .invert .invert .invert .invert .invert .invert .invert .invert .button {
   background-color: #ffffff; }
 
+hr {
+  border-color: #ffffff; }
+
 .menu-icon::after, .menu-icon:hover::after {
   background-color: #ffffff;
   box-shadow: 0 7px 0 #ffffff, 0 14px #ffffff; }
@@ -147,6 +150,11 @@
   color: #000000;
   border-color: #000000; }
 
+.invert hr,
+.invert .invert .invert hr,
+.invert .invert .invert .invert .invert hr,
+.invert .invert .invert .invert .invert .invert .invert hr {
+  border-color: #000000; }
 .invert .menu-icon::after, .invert .menu-icon:hover::after,
 .invert .invert .invert .menu-icon::after,
 .invert .invert .invert .menu-icon:hover::after,
@@ -275,6 +283,11 @@
   color: #ffffff;
   border-color: #ffffff; }
 
+.invert .invert hr,
+.invert .invert .invert .invert hr,
+.invert .invert .invert .invert .invert .invert hr,
+.invert .invert .invert .invert .invert .invert .invert .invert hr {
+  border-color: #ffffff; }
 .invert .invert .menu-icon::after, .invert .invert .menu-icon:hover::after,
 .invert .invert .invert .invert .menu-icon::after,
 .invert .invert .invert .invert .menu-icon:hover::after,
@@ -445,6 +458,10 @@ main {
 
 .text-content h1 {
   font-size: 2rem; }
+
+.address {
+  margin-left: 2rem;
+  font-weight: bold; }
 
 /* General */
 .italics {

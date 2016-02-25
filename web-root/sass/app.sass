@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
 	@extend .inverted-fg-color
 	@extend .inverted-bg-color
 
+hr
+	border-color: $fg-color-primary
+
 .menu-icon::after, .menu-icon:hover::after
 	background-color: $fg-color-primary
 	box-shadow: 0 7px 0 $fg-color-primary, 0 14px $fg-color-primary
@@ -78,6 +81,9 @@ h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
 	.button:hover, .button:focus
 		@extend .inverted-fg-color
 		@extend .inverted-bg-color
+		
+	hr
+		border-color: $bg-color-primary
 	
 	.menu-icon::after, .menu-icon:hover::after
 		background-color: $bg-color-primary
@@ -124,6 +130,9 @@ h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
 	.button:hover, .button:focus
 		@extend .standard-fg-color
 		@extend .standard-bg-color
+	
+	hr
+		border-color: $fg-color-primary
 	
 	.menu-icon::after, .menu-icon:hover::after
 		background-color: $fg-color-primary
@@ -196,6 +205,10 @@ main
 
 .text-content h1
 	font-size: 2rem
+
+.address
+	margin-left: $medium-spacing
+	font-weight: bold
 
 
 /* General
