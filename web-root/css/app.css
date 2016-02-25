@@ -142,7 +142,7 @@
   color: #ffffff;
   border-color: #ffffff; }
 
-[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea {
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
   background-color: #ffffff;
   color: #000000;
   border-color: #000000; }
@@ -225,7 +225,7 @@
   background-color: #ffffff;
   color: #000000;
   border-color: #000000; }
-.invert [type=text]:focus, .invert [type=password]:focus, .invert [type=date]:focus, .invert [type=datetime]:focus, .invert [type=datetime-local]:focus, .invert [type=month]:focus, .invert [type=week]:focus, .invert [type=email]:focus, .invert [type=number]:focus, .invert [type=search]:focus, .invert [type=tel]:focus, .invert [type=time]:focus, .invert [type=url]:focus, .invert [type=color]:focus, .invert textarea,
+.invert [type=text]:focus, .invert [type=password]:focus, .invert [type=date]:focus, .invert [type=datetime]:focus, .invert [type=datetime-local]:focus, .invert [type=month]:focus, .invert [type=week]:focus, .invert [type=email]:focus, .invert [type=number]:focus, .invert [type=search]:focus, .invert [type=tel]:focus, .invert [type=time]:focus, .invert [type=url]:focus, .invert [type=color]:focus, .invert textarea:focus,
 .invert .invert .invert [type=text]:focus,
 .invert .invert .invert [type=password]:focus,
 .invert .invert .invert [type=date]:focus,
@@ -240,7 +240,7 @@
 .invert .invert .invert [type=time]:focus,
 .invert .invert .invert [type=url]:focus,
 .invert .invert .invert [type=color]:focus,
-.invert .invert .invert textarea,
+.invert .invert .invert textarea:focus,
 .invert .invert .invert .invert .invert [type=text]:focus,
 .invert .invert .invert .invert .invert [type=password]:focus,
 .invert .invert .invert .invert .invert [type=date]:focus,
@@ -255,7 +255,7 @@
 .invert .invert .invert .invert .invert [type=time]:focus,
 .invert .invert .invert .invert .invert [type=url]:focus,
 .invert .invert .invert .invert .invert [type=color]:focus,
-.invert .invert .invert .invert .invert textarea,
+.invert .invert .invert .invert .invert textarea:focus,
 .invert .invert .invert .invert .invert .invert .invert [type=text]:focus,
 .invert .invert .invert .invert .invert .invert .invert [type=password]:focus,
 .invert .invert .invert .invert .invert .invert .invert [type=date]:focus,
@@ -270,7 +270,7 @@
 .invert .invert .invert .invert .invert .invert .invert [type=time]:focus,
 .invert .invert .invert .invert .invert .invert .invert [type=url]:focus,
 .invert .invert .invert .invert .invert .invert .invert [type=color]:focus,
-.invert .invert .invert .invert .invert .invert .invert textarea {
+.invert .invert .invert .invert .invert .invert .invert textarea:focus {
   background-color: #000000;
   color: #ffffff;
   border-color: #ffffff; }
@@ -353,7 +353,7 @@
   background-color: #000000;
   color: #ffffff;
   border-color: #ffffff; }
-.invert .invert [type=text]:focus, .invert .invert [type=password]:focus, .invert .invert [type=date]:focus, .invert .invert [type=datetime]:focus, .invert .invert [type=datetime-local]:focus, .invert .invert [type=month]:focus, .invert .invert [type=week]:focus, .invert .invert [type=email]:focus, .invert .invert [type=number]:focus, .invert .invert [type=search]:focus, .invert .invert [type=tel]:focus, .invert .invert [type=time]:focus, .invert .invert [type=url]:focus, .invert .invert [type=color]:focus, .invert .invert textarea,
+.invert .invert [type=text]:focus, .invert .invert [type=password]:focus, .invert .invert [type=date]:focus, .invert .invert [type=datetime]:focus, .invert .invert [type=datetime-local]:focus, .invert .invert [type=month]:focus, .invert .invert [type=week]:focus, .invert .invert [type=email]:focus, .invert .invert [type=number]:focus, .invert .invert [type=search]:focus, .invert .invert [type=tel]:focus, .invert .invert [type=time]:focus, .invert .invert [type=url]:focus, .invert .invert [type=color]:focus, .invert .invert textarea:focus,
 .invert .invert .invert .invert [type=text]:focus,
 .invert .invert .invert .invert [type=password]:focus,
 .invert .invert .invert .invert [type=date]:focus,
@@ -368,7 +368,7 @@
 .invert .invert .invert .invert [type=time]:focus,
 .invert .invert .invert .invert [type=url]:focus,
 .invert .invert .invert .invert [type=color]:focus,
-.invert .invert .invert .invert textarea,
+.invert .invert .invert .invert textarea:focus,
 .invert .invert .invert .invert .invert .invert [type=text]:focus,
 .invert .invert .invert .invert .invert .invert [type=password]:focus,
 .invert .invert .invert .invert .invert .invert [type=date]:focus,
@@ -383,7 +383,7 @@
 .invert .invert .invert .invert .invert .invert [type=time]:focus,
 .invert .invert .invert .invert .invert .invert [type=url]:focus,
 .invert .invert .invert .invert .invert .invert [type=color]:focus,
-.invert .invert .invert .invert .invert .invert textarea,
+.invert .invert .invert .invert .invert .invert textarea:focus,
 .invert .invert .invert .invert .invert .invert .invert .invert [type=text]:focus,
 .invert .invert .invert .invert .invert .invert .invert .invert [type=password]:focus,
 .invert .invert .invert .invert .invert .invert .invert .invert [type=date]:focus,
@@ -398,7 +398,7 @@
 .invert .invert .invert .invert .invert .invert .invert .invert [type=time]:focus,
 .invert .invert .invert .invert .invert .invert .invert .invert [type=url]:focus,
 .invert .invert .invert .invert .invert .invert .invert .invert [type=color]:focus,
-.invert .invert .invert .invert .invert .invert .invert .invert textarea {
+.invert .invert .invert .invert .invert .invert .invert .invert textarea:focus {
   background-color: #ffffff;
   color: #000000;
   border-color: #000000; }
