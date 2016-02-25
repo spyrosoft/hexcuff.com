@@ -11,7 +11,7 @@
 (defvar hexcuff-server
   (make-instance 'hunchentoot:easy-acceptor
                  :document-root "web-root"
-                 :error-template-directory "web-root/error-templates/"
+                 :error-template-directory "web-root/pages/error-templates/"
                  :access-log-destination "logs/access.log"
                  :message-log-destination "logs/error.log"
                  :port 8087))
