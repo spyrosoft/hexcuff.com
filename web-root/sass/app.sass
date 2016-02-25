@@ -191,6 +191,9 @@ hr
 .no-padding
 	padding: 0
 
+.medium-margin-bottom
+	margin-bottom: $medium-spacing
+
 h1, h2, h3, h4, h5, h6
 	line-height: 100%
 
@@ -243,3 +246,18 @@ main
 
 .thumbnail-image
 	cursor: pointer
+
+.product
+	position: relative
+
+.product .caption
+	position: absolute
+	top: 0
+	text-align: center
+	padding: $small-spacing
+	width: 100%
+	font-size: 1.2rem
+	display: none
+
+.product:hover .caption
+	display: block

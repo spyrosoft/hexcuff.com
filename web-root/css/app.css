@@ -444,6 +444,9 @@ hr {
 .no-padding {
   padding: 0; }
 
+.medium-margin-bottom {
+  margin-bottom: 2rem; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 100%; }
 
@@ -491,5 +494,20 @@ main {
 /* Products */
 .thumbnail-image {
   cursor: pointer; }
+
+.product {
+  position: relative; }
+
+.product .caption {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  display: none; }
+
+.product:hover .caption {
+  display: block; }
 
 /*# sourceMappingURL=app.css.map */
