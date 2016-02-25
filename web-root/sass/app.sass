@@ -1,7 +1,9 @@
 $fg-color-primary: #ffffff
 $fg-color-secondary: #d0d0d0
+$fg-color-translucent: rgba( 255, 255, 255, 0.8 )
 $bg-color-primary: #000000
 $bg-color-secondary: #020202
+$bg-color-translucent: rgba( 0, 0, 0, 0.8 )
 
 $tiny-spacing: 0.2rem
 $small-spacing: 1rem
@@ -18,11 +20,17 @@ $huge-spacing: 10rem
 .standard-bg-color
 	background-color: $bg-color-primary
 
+.standard-bg-color-translucent
+	background-color: $bg-color-translucent
+
 .inverted-fg-color
 	color: $bg-color-primary
 
 .inverted-bg-color
 	background-color: $fg-color-primary
+
+.inverted-bg-color-translucent
+	background-color: $bg-color-translucent
 
 body,
 .off-canvas
@@ -63,6 +71,10 @@ hr
 	background-color: $fg-color-primary
 	color: $bg-color-primary
 	border-color: $bg-color-primary
+
+.product .caption
+	@extend .inverted-fg-color
+	@extend .inverted-bg-color-translucent
 
 .invert,
 .invert .invert .invert,
@@ -111,6 +123,9 @@ hr
 		color: $fg-color-primary
 		border-color: $fg-color-primary
 
+	.product .caption
+		@extend .standard-fg-color
+		@extend .standard-bg-color-translucent
 
 
 .invert .invert,
@@ -160,6 +175,10 @@ hr
 		color: $bg-color-primary
 		border-color: $bg-color-primary
 
+	.product .caption
+		@extend .inverted-fg-color
+		@extend .inverted-bg-color-translucent
+
 .js-off-canvas-exit
 	background-color: rgba( 0, 0, 0, 0.5 )
 
@@ -183,6 +202,9 @@ h1, h2, h3, h4, h5, h6
 ul, ol
 	margin-left: $medium-spacing
 	margin-top: 0
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child)
+	float: left
 
 .menu-icon
 	margin: 0.5rem

@@ -3,7 +3,10 @@
 .off-canvas, h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus, .invert .button,
 .invert .invert .invert .button,
 .invert .invert .invert .invert .invert .button,
-.invert .invert .invert .invert .invert .invert .invert .button, .invert .invert,
+.invert .invert .invert .invert .invert .invert .invert .button, .invert .product .caption,
+.invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .invert .product .caption, .invert .invert,
 .invert .invert .invert .invert,
 .invert .invert .invert .invert .invert .invert,
 .invert .invert .invert .invert .invert .invert .invert .invert, .invert .invert h1, .invert .invert h2, .invert .invert h3, .invert .invert h4, .invert .invert h5, .invert .invert h6, .invert .invert a, .invert .invert a:hover, .invert .invert a:visited, .invert .invert a:focus,
@@ -61,7 +64,13 @@
 .invert .invert .invert .invert .invert .invert .invert .invert .button:focus {
   background-color: #000000; }
 
-.inverted-fg-color, .button, .invert,
+.standard-bg-color-translucent, .invert .product .caption,
+.invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .invert .product .caption {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.inverted-fg-color, .button, .product .caption, .invert,
 .invert .invert .invert,
 .invert .invert .invert .invert .invert,
 .invert .invert .invert .invert .invert .invert .invert, .invert h1, .invert h2, .invert h3, .invert h4, .invert h5, .invert h6, .invert a, .invert a:hover, .invert a:visited, .invert a:focus,
@@ -103,7 +112,10 @@
 .invert .invert .invert .invert .invert .invert .invert .button:focus, .invert .invert .button,
 .invert .invert .invert .invert .button,
 .invert .invert .invert .invert .invert .invert .button,
-.invert .invert .invert .invert .invert .invert .invert .invert .button {
+.invert .invert .invert .invert .invert .invert .invert .invert .button, .invert .invert .product .caption,
+.invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .invert .invert .product .caption {
   color: #000000; }
 
 .inverted-bg-color, .button, .invert,
@@ -120,6 +132,12 @@
 .invert .invert .invert .invert .invert .invert .button,
 .invert .invert .invert .invert .invert .invert .invert .invert .button {
   background-color: #ffffff; }
+
+.inverted-bg-color-translucent, .product .caption, .invert .invert .product .caption,
+.invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .product .caption,
+.invert .invert .invert .invert .invert .invert .invert .invert .product .caption {
+  background-color: rgba(0, 0, 0, 0.8); }
 
 hr {
   border-color: #ffffff; }
@@ -437,6 +455,9 @@ h1, h2, h3, h4, h5, h6 {
 ul, ol {
   margin-left: 2rem;
   margin-top: 0; }
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+  float: left; }
 
 .menu-icon {
   margin: 0.5rem; }
