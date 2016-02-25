@@ -2,8 +2,13 @@
 
 (load "utilities/routing.lisp")
 
+(route-directory "/cuffs/" "/pages/cuffs" "text/html")
+(route-file "/about-us/" "/pages" "about-us" "html" "text/html")
+(route-file "/contact-us/" "/pages" "contact-us" "html" "text/html")
+(route-file "/cuff-size/" "/pages" "cuff-size" "html" "text/html")
+
 ;; Route / to index.html and serve it as text/html
-(route-file "/" "/" "index" "html" "text/html")
+(route-file "/" "/pages" "index" "html" "text/html")
 
 ;; Route everything in /css/ to the /css directory and serve it as text/html
 (route-directory "/css/" "/css" "text/css")
