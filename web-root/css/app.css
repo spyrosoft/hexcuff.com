@@ -488,4 +488,8 @@ main {
 .italics {
   font-style: italic; }
 
+/* Products */
+.thumbnail-image {
+  cursor: pointer; }
+
 /*# sourceMappingURL=app.css.map */
