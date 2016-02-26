@@ -15,11 +15,9 @@ $( 'button.checkout' ).on( 'click', stripe_checkout );
 function stripe_checkout( click_event ) {
 	click_event.preventDefault();
 	try {
-		var product_price = parseFloat( $( '#product-price' ).html() );
-		var product_price_in_cents = convert_price_to_cents( product_price );
-		if ( product_price_in_cents === null ) {
-			throw 'The product price is not a number. It is the following: ' + product_price;
-		}
+		var price = parseFloat( $( '#price' ).html() );
+		var quantity = parseInt( $( '#quantity' ).html() );
+		var total_in_cents = Utilities.convertDollarsToCents( price * quantity );
 	} catch ( error ) {
 		alert( 'Something is wrong with the shopping cart. We have been notified, and will resolve the issue as quickly as possible. Please try again after a while.' );
 		notify_admin(
@@ -33,7 +31,7 @@ function stripe_checkout( click_event ) {
 	stripe_handle.open({
 		'name' : 'Hex Cuff',
 		'description' : 'REPLACE ME WITH REAL HEX CUFFS',
-		'amount' : product_price_in_cents
+		'amount' : total_in_cents
 	});
 }
 
@@ -42,14 +40,6 @@ function notify_admin( message ) {
 		'message' : message
 	};
 	$.post( '/notify-admin-ajax/', message_fields_and_values );
-}
-
-function convert_price_to_cents( product_price ) {
-	if ( parseFloat( product_price ) !== product_price ) {
-		return null;
-	}
-	var product_price_in_cents = Math.ceil( product_price * 100 );
-	return product_price_in_cents;
 }
 
 $( window ).on( 'popstate', function() { stripe_handle.close(); });
