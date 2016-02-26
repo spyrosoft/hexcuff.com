@@ -438,11 +438,23 @@ hr {
   background-color: rgba(0, 0, 0, 0.5); }
 
 /* Spacing */
+main {
+  padding-bottom: 1rem; }
+
+.off-canvas-wrapper {
+  margin-bottom: 4rem; }
+
 .no-margin {
   margin: 0 auto; }
 
+.no-margin-top {
+  margin-top: 0; }
+
 .no-padding {
   padding: 0; }
+
+.small-margin-bottom {
+  margin-bottom: 1rem; }
 
 .medium-margin-bottom {
   margin-bottom: 2rem; }
@@ -472,9 +484,6 @@ header h1, header h2, header h3, header h4 {
 header .logo {
   margin-top: 1rem;
   margin-bottom: 1rem; }
-
-main {
-  padding-bottom: 4rem; }
 
 .text-content {
   max-width: 35rem;
@@ -507,10 +516,9 @@ main {
   text-align: center;
   padding: 1rem;
   width: 100%;
-  font-size: 1.2rem;
-  display: none; }
+  font-size: 1.2rem; }
 
 .product:hover .caption {
-  display: block; }
+  display: block !important; }
 
 /*# sourceMappingURL=app.css.map */

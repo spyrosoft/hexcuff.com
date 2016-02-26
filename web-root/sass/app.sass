@@ -185,12 +185,24 @@ hr
 
 /* Spacing
 
+main
+	padding-bottom: $small-spacing
+
+.off-canvas-wrapper
+	margin-bottom: $large-spacing
+
 .no-margin
 	margin: 0 auto
 
+.no-margin-top
+	margin-top: 0
+	
 .no-padding
 	padding: 0
 
+.small-margin-bottom
+	margin-bottom: $small-spacing
+	
 .medium-margin-bottom
 	margin-bottom: $medium-spacing
 
@@ -220,9 +232,6 @@ header
 header .logo
 	margin-top: $small-spacing
 	margin-bottom: $small-spacing
-
-main
-	padding-bottom: $large-spacing
 
 .text-content
 	max-width: 35rem
@@ -260,7 +269,6 @@ main
 	padding: $small-spacing
 	width: 100%
 	font-size: 1.2rem
-	display: none
 
 .product:hover .caption
-	display: block
+	display: block !important
