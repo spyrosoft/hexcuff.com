@@ -450,9 +450,9 @@ hr {
   background-color: rgba(0, 0, 0, 0.5); }
 
 /* Spacing */
-main {
-  padding-bottom: 1rem; }
-
+@media screen and (min-width: 63.9375em) {
+  main {
+    padding-bottom: 1rem; } }
 .off-canvas-wrapper {
   margin-bottom: 4rem; }
 
