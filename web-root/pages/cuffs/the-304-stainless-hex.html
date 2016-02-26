@@ -59,11 +59,44 @@
 							<p>
 								Words "THE 304" are etched into the side representing its remarkable grade of stainless steel.
 							</p>
-							<h4>Total: $<span id="product-price">14</span></h4>
 						</div>
 						
-						<div class="text-center">
-							<button class="button checkout large">Purchase</button>
+						<div class="row">
+							
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Slot Size:
+									<select id="slot-size">
+										<option value="small">Small</option>
+										<option value="medium" selected="selected">Medium</option>
+										<option value="large">Large</option>
+									</select>
+								</label>
+							</div>
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Which Ear:
+									<select id="which-ear">
+										<option value="left">Left</option>
+										<option value="right">Right</option>
+									</select>
+								</label>
+							</div>
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Quantity:
+									<input type="number" id="quantity" min="1" value="1">
+								</label>
+							</div>
+							
+						</div>
+						
+						<div class="row columns">
+							<h4>Total: $<span id="total">14</span></h4>
+							<input type="hidden" value="14" id="price">
+							<div class="text-center">
+								<button class="button checkout large">Purchase</button>
+							</div>
 						</div>
 						
 					</div>
@@ -90,6 +123,7 @@
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/what-input.min.js"></script>
 	<script src="/js/foundation.min.js"></script>
+	<script src="/js/utilities.js"></script>
 	<script src="/js/app.js"></script>
 	<script src="/js/product.js"></script>
 	<script src="https://checkout.stripe.com/checkout.js"></script>
