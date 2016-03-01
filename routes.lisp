@@ -8,6 +8,7 @@
 (route-file "/cuff-size/" "/pages" "cuff-size" "html" "text/html")
 
 (load "acceptors/contact-us.lisp")
+(load "acceptors/new-order.lisp")
 
 ;; Route / to index.html and serve it as text/html
 (route-file "/" "/pages" "index" "html" "text/html")

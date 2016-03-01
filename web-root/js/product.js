@@ -37,8 +37,8 @@ $( 'button.checkout' ).on( 'click', stripe_checkout );
 function stripe_checkout( click_event ) {
 	click_event.preventDefault();
 	try {
-		var price = parseFloat( $( '#price' ).html() );
-		var quantity = parseInt( $( '#quantity' ).html() );
+		var price = parseFloat( $( '#price' ).val() );
+		var quantity = parseInt( $( '#quantity' ).val() );
 		var total_in_cents = Utilities.convertDollarsToCents( price * quantity );
 	} catch ( error ) {
 		alert( 'Something is wrong with the shopping cart. We have been notified, and will resolve the issue as quickly as possible. Please try again after a while.' );
@@ -50,9 +50,10 @@ function stripe_checkout( click_event ) {
 		);
 		return;
 	}
+	var cuff_description = $( '#which-cuff' ).html() + ', Size: ' + $( '#slot-size' ).val() + ', Ear: ' + $( '#which-ear' ).val() + ', Quantity: ' + $( '#quantity' ).val();
 	stripe_handle.open({
 		'name' : 'Hex Cuff',
-		'description' : 'REPLACE ME WITH REAL HEX CUFFS',
+		'description' : cuff_description,
 		'amount' : total_in_cents
 	});
 }
@@ -70,7 +71,12 @@ $( window ).on( 'popstate', function() { stripe_handle.close(); });
 
 function stripe_submit_order( stripe_token ) {
 	var new_order_fields_and_values = {
-		'token' : stripe_token.id
+		'customer-email' : stripe_token.email,
+		'which-cuff' : $( '#which-cuff' ).html(),
+		'slot-size' : $( '#slot-size' ).val(),
+		'which-ear' : $( '#which-ear' ).val(),
+		'quantity' : $( '#quantity' ).val(),
+		'shopify-token' : stripe_token.id
 	};
 	$.post( '/new-order-ajax/', new_order_fields_and_values )
 		.done( stripe_transaction_success )
@@ -78,6 +84,7 @@ function stripe_submit_order( stripe_token ) {
 }
 
 function stripe_transaction_success( server_response ) {
+	console.log( 'success', server_response )
 	try {
 		server_response = JSON.parse( server_response );
 	} catch ( error ) {
@@ -103,5 +110,6 @@ function stripe_transaction_success( server_response ) {
 }
 
 function stripe_transaction_fail( server_response ) {
+	console.log( 'fail', server_response )
 	alert( 'Something went wrong while communicating with the server. It is possible that the payment gateway is down. Please try again after a while. If the problem persists, please contact us and let us know.' );
 }
