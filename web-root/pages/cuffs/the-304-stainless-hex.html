@@ -7,7 +7,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	
-	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
 	
 	<meta name="description" content="A starting point for developers using Foundation 6 for any purpose.">
 	
@@ -19,7 +19,9 @@
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 			<div class="off-canvas-content invert" data-off-canvas-content>
 				
-				<button type="button" class="menu-icon float-right" data-toggle="left-nav"></button>
+				<div data-toggle="main-navigation" class="float-right">
+					<button class="menu-icon"></button>
+				</div>
 				
 				<header class="row columns clearfix">
 					<h2>
@@ -35,7 +37,7 @@
 				<main class="row columns">
 					<div class="text-content">
 						
-						<h1>The 304 - Stainless Hex</h1>
+						<h1 id="which-cuff">The 304 - Stainless Hex</h1>
 						
 						<div class="row collapse product-images">
 							<div class="columns">
@@ -53,17 +55,55 @@
 						</div>
 						
 						<div class="italics">
-							<h3>Alloys in the stainless metal shine a deep, indestructible gleam.</h3>
+							<h3>Alloys in the stainless metal shine a deep indestructible gleam.</h3>
 							<p>
-								Words "THE 304" are etched into the side representing its remarkable grade of stainless steel.
+								Words "THE 304" are etched into the side boasting its remarkable grade of stainless steel.
 							</p>
+						</div>
+						
+						<div class="row">
+							
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Slot Size:
+									<select id="slot-size">
+										<option value="Small">Small</option>
+										<option value="Medium" selected="selected">Medium</option>
+										<option value="Large">Large</option>
+									</select>
+								</label>
+							</div>
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Which Ear:
+									<select id="which-ear">
+										<option value="Left">Left</option>
+										<option value="Right">Right</option>
+									</select>
+								</label>
+							</div>
+							<div class="columns large-4 medium-4 small-6">
+								<label>
+									Quantity:
+									<input type="number" id="quantity" min="1" value="1">
+								</label>
+							</div>
+							
+						</div>
+						
+						<div class="row columns">
+							<h4>Total: $<span id="total">14</span></h4>
+							<input type="hidden" value="14" id="price">
+							<div class="text-center">
+								<button class="button checkout large">Purchase</button>
+							</div>
 						</div>
 						
 					</div>
 				</main>
 			</div>
 			
-			<div class="off-canvas position-right" id="left-nav" data-off-canvas data-position="right">
+			<div class="off-canvas position-right" id="main-navigation" data-off-canvas data-position="right">
 				
 				<div class="row columns">
 					<h3>Site Links</h3>
@@ -71,9 +111,9 @@
 				
 				<ul class="vertical menu" data-drilldown>
 					<li><a href="/">Catalog</a></li>
-					<li><a href="about-us.html">About Us</a></li>
-					<li><a href="/contact-us.html">Contact Us</a></li>
-					<li><a href="sizing.html">Cuff Size</a></li>
+					<li><a href="/about-us/">About Us</a></li>
+					<li><a href="/contact-us/">Contact Us</a></li>
+					<li><a href="/cuff-size/">Cuff Size</a></li>
 				</ul>
 				
 			</div>
@@ -83,7 +123,9 @@
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/what-input.min.js"></script>
 	<script src="/js/foundation.min.js"></script>
+	<script src="/js/utilities.js"></script>
 	<script src="/js/app.js"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
 	<script src="/js/product.js"></script>
 </body>
 </html>

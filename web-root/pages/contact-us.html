@@ -19,7 +19,9 @@
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 			<div class="off-canvas-content invert" data-off-canvas-content>
 				
-				<button type="button" class="menu-icon float-right" data-toggle="left-nav"></button>
+				<div data-toggle="main-navigation" class="float-right">
+					<button class="menu-icon"></button>
+				</div>
 				
 				<header class="row columns clearfix">
 					<h2>
@@ -38,7 +40,7 @@
 						<h1>Contact Us</h1>
 					</div>
 					
-					<form action="/contact-ajax/" method="post" target="_blank" id="contact-form">
+					<form action="/contact-us-ajax/" method="post" target="_blank" id="contact-form">
 						
 						<div class="row">
 							<div class="columns medium-6 large-6">
@@ -47,36 +49,21 @@
 									<input type="text" name="name">
 								</label>
 							</div>
-						</div>
-						
-						<div class="row">
-							<div class="columns medium-6 large-6">
-								<label>
-									Subject
-									<input type="text" name="subject">
-								</label>
-							</div>
-						</div>
-						
-						<div class="row">
+							
 							<div class="columns medium-6 large-6">
 								<label>
 									Email
 									<input type="email" name="email">
 								</label>
 							</div>
-						</div>
-
-						<div class="row">
+							
 							<div class="columns">
 								<label>
 									Message <sup>(Required)</sup>
 									<textarea name="message" cols="40" rows="10"></textarea>
 								</label>
 							</div>
-						</div>
-						
-						<div class="row">
+							
 							<div class="columns text-center">
 								<button class="button" type="submit">Submit</button>
 							</div>
@@ -89,7 +76,7 @@
 				</main>
 			</div>
 			
-			<div class="off-canvas position-right" id="left-nav" data-off-canvas data-position="right">
+			<div class="off-canvas position-right" id="main-navigation" data-off-canvas data-position="right">
 				
 				<div class="row columns">
 					<h3>Site Links</h3>
@@ -98,7 +85,6 @@
 				<ul class="vertical menu" data-drilldown>
 					<li><a href="/">Catalog</a></li>
 					<li><a href="/about-us/">About Us</a></li>
-					<li><a href="/contact-us/">Contact Us</a></li>
 					<li><a href="/cuff-size/">Cuff Size</a></li>
 				</ul>
 				

@@ -1,0 +1,20 @@
+Dear CUSTOMER-NAME,
+
+Your order has been received for QUANTITY of the WHICH-CUFF size SLOT-SIZE for the WHICH-EAR ear.
+
+The poster will be shipped to the following address:
+SHIPPING-ADDRESS
+SHIPPING-CITY, SHIPPING-STATE SHIPPING-ZIP
+
+Your order total came out to ORDER-TOTAL.
+
+I would love to hear from you to:
+* Give feedback for ways the site could be better.
+* Share any other comments, questions or ideas.
+* (My favorite) Just say hi! It makes a huge difference to me to connect with you.
+
+Hit reply and we'll get your message.
+
+Thank you sincerely,
+
+Hex Cuff

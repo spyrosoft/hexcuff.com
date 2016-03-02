@@ -16,6 +16,9 @@
                  :message-log-destination "logs/error.log"
                  :port 8087))
 
+(load "utilities/utility-belt.lisp")
+(load "packages/mailgun.lisp")
+(load "private/credentials.lisp")
 (load "routes.lisp")
 
 (hunchentoot:start hexcuff-server)
