@@ -23,7 +23,8 @@ update_total();
 /* Stripe */
 
 var stripe_handle = StripeCheckout.configure({
-	key: 'pk_test_RuyrACKp8FG3rI4f26vgMu02',
+//	key: 'pk_test_RuyrACKp8FG3rI4f26vgMu02',
+	key: 'pk_live_MJOzBT97LnvpLYpkXWho4TZt',
 	image: '/images/hex-cuff-logo-square.svg',
 	locale: 'auto',
 // Can't use bitcoin because the email is not returned in the Stripe token data...
