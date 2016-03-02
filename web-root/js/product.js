@@ -26,7 +26,7 @@ var stripe_handle = StripeCheckout.configure({
 	key: 'pk_test_RuyrACKp8FG3rI4f26vgMu02',
 	image: '/images/hex-cuff-logo-square.svg',
 	locale: 'auto',
-	bitcoin: true,
+//	bitcoin: true,
 	zipCode: true,
 	shippingAddress: true,
 	token: stripe_submit_order
@@ -88,28 +88,32 @@ function stripe_transaction_success( server_response ) {
 	try {
 		server_response = JSON.parse( server_response );
 	} catch ( error ) {
-		stripe_transaction_fail();
+		stripe_communication_failure();
 		return;
 	}
 	if ( typeof server_response[ 'success' ] === 'undefined' )
 	{
-		stripe_transaction_fail();
+		stripe_communication_failure();
 	}
-	else if ( server_response[ 'success' ] === 'true' )
+	else if ( server_response[ 'success' ] === true )
 	{
 		alert( 'We have received your order and will ship your Hex Cuff within the next two weeks.' );
 	}
 	else if ( typeof server_response[ 'message' ] !== 'undefined' )
 	{
-		alert( 'The transaction was rejected. The payment gateway\'s server_response: ' + server_response[ 'message' ] );
+		alert( 'The transaction was rejected. The payment gateway\'s server responded with the following message: ' + server_response[ 'message' ] );
 	}
 	else
 	{
-		stripe_transaction_fail();
+		stripe_communication_failure();
 	}
 }
 
 function stripe_transaction_fail( server_response ) {
 	console.log( 'fail', server_response )
+	stripe_communication_failure();
+}
+
+function stripe_communication_failure() {
 	alert( 'Something went wrong while communicating with the server. It is possible that the payment gateway is down. Please try again after a while. If the problem persists, please contact us and let us know.' );
 }
