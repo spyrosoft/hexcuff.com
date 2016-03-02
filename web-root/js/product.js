@@ -26,6 +26,7 @@ var stripe_handle = StripeCheckout.configure({
 	key: 'pk_test_RuyrACKp8FG3rI4f26vgMu02',
 	image: '/images/hex-cuff-logo-square.svg',
 	locale: 'auto',
+// Can't use bitcoin because the email is not returned in the Stripe token data...
 //	bitcoin: true,
 	zipCode: true,
 	shippingAddress: true,
@@ -84,7 +85,6 @@ function stripe_submit_order( stripe_token ) {
 }
 
 function stripe_transaction_success( server_response ) {
-	console.log( 'success', server_response )
 	try {
 		server_response = JSON.parse( server_response );
 	} catch ( error ) {
@@ -110,7 +110,6 @@ function stripe_transaction_success( server_response ) {
 }
 
 function stripe_transaction_fail( server_response ) {
-	console.log( 'fail', server_response )
 	stripe_communication_failure();
 }
 
