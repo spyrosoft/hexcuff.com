@@ -67,7 +67,7 @@
 " (jsown:val shipping-data "address_line2"))))
       (let ((message-search (list "CUSTOMER-NAME" "QUANTITY" "WHICH-CUFF" "SLOT-SIZE" "WHICH-EAR" "SHIPPING-ADDRESS" "SHIPPING-CITY" "SHIPPING-STATE" "SHIPPING-ZIP" "ORDER-TOTAL"))
             (message-replace (list customer-name quantity which-cuff slot-size which-ear address city state zip order-total)))
-        (mapcar #'(lambda (search replace) (cl-ppcre:regex-replace search order-email-message replace)) message-search message-replace)
+        (mapcar #'(lambda (search replace) (setq order-email-message (cl-ppcre:regex-replace search order-email-message replace))) message-search message-replace)
         )
       (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) order-email-message :bcc *orders-from-email-address*)
       )))
