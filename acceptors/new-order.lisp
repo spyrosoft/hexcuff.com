@@ -69,7 +69,8 @@
             (message-replace (list customer-name quantity which-cuff slot-size which-ear address city state zip order-total)))
         (mapcar #'(lambda (search replace) (setq order-email-message (cl-ppcre:regex-replace search order-email-message replace))) message-search message-replace)
         )
-      (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) order-email-message :bcc *orders-from-email-address*)
+      (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) order-email-message)
+      (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) *orders-from-email-address*)
       )))
 
 (define-easy-handler (new-order
