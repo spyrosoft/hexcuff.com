@@ -6,7 +6,7 @@ Your order will be shipped to the following address:
 SHIPPING-ADDRESS
 SHIPPING-CITY, SHIPPING-STATE SHIPPING-ZIP
 
-The total came out to ORDER-TOTAL.
+The total came out to $ORDER-TOTAL.
 
 I would love to hear from you. If you would like to:
 * Give feedback for ways the site could be better.
