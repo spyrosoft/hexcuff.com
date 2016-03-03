@@ -70,7 +70,7 @@
         (mapcar #'(lambda (search replace) (setq order-email-message (cl-ppcre:regex-replace search order-email-message replace))) message-search message-replace)
         )
       (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) order-email-message)
-      (mailgun:send-message customer-email (concatenate 'string "Receipt of hexcuff.com order #" order-id) *orders-from-email-address*)
+      (mailgun:send-message *orders-from-email-address* (concatenate 'string "Receipt of hexcuff.com order #" order-id) order-email-message)
       )))
 
 (define-easy-handler (new-order
