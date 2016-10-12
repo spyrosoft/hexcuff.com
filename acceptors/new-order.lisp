@@ -1,8 +1,8 @@
 (defvar *hex-cuffs-and-prices* (make-hash-table :test 'equal))
-(setf (gethash "The Guy/Girl Magnet Hex" *hex-cuffs-and-prices*) "800")
-(setf (gethash "The 304 - Stainless Hex" *hex-cuffs-and-prices*) "1400")
-(setf (gethash "Steel Serrated Locking Hex" *hex-cuffs-and-prices*) "1200")
-(setf (gethash "Steel Self Locking Black Hex" *hex-cuffs-and-prices*) "1200")
+(setf (gethash "The Guy/Girl Magnet Hex" *hex-cuffs-and-prices*) "500")
+(setf (gethash "The 304 - Stainless Hex" *hex-cuffs-and-prices*) "1000")
+(setf (gethash "Steel Serrated Locking Hex" *hex-cuffs-and-prices*) "800")
+(setf (gethash "Steel Self Locking Black Hex" *hex-cuffs-and-prices*) "800")
 
 (defun invalid-input-exists (customer-email which-cuff slot-size which-ear quantity shopify-token)
   (let ((error-messages '()))
