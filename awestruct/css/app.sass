@@ -1,0 +1,282 @@
+$fg-color-primary: #ffffff
+$fg-color-secondary: #d0d0d0
+$fg-color-translucent: rgba( 255, 255, 255, 0.8 )
+$bg-color-primary: #000000
+$bg-color-secondary: #020202
+$bg-color-translucent: rgba( 0, 0, 0, 0.8 )
+
+$tiny-spacing: 0.2rem
+$small-spacing: 1rem
+$medium-spacing: 2rem
+$large-spacing: 4rem
+$huge-spacing: 10rem
+
+
+/* Colors
+
+.standard-fg-color
+	color: $fg-color-primary
+
+.standard-bg-color
+	background-color: $bg-color-primary
+
+.standard-bg-color-translucent
+	background-color: $bg-color-translucent
+
+.inverted-fg-color
+	color: $bg-color-primary
+
+.inverted-bg-color
+	background-color: $fg-color-primary
+
+.inverted-bg-color-translucent
+	background-color: $bg-color-translucent
+
+body,
+.off-canvas
+	@extend .standard-fg-color
+	@extend .standard-bg-color
+
+h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
+	@extend .standard-fg-color
+
+.button
+	@extend .inverted-fg-color
+	@extend .inverted-bg-color
+
+hr
+	border-color: $fg-color-primary
+
+.menu-icon::after, .menu-icon:hover::after
+	background-color: $fg-color-primary
+	box-shadow: 0 7px 0 $fg-color-primary, 0 14px $fg-color-primary
+
+.is-drilldown-submenu
+	background-color: $fg-color-primary
+
+.is-drilldown-submenu-parent>a::after
+	border-color: transparent transparent transparent $fg-color-primary
+.js-drilldown-back::before
+	border-color: transparent $bg-color-primary transparent transparent
+
+.is-drilldown-submenu a
+	color: $bg-color-primary
+
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea, select
+	background-color: $bg-color-primary
+	color: $fg-color-primary
+	border-color: $fg-color-primary
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus, select:focus
+	background-color: $fg-color-primary
+	color: $bg-color-primary
+	border-color: $bg-color-primary
+
+.product .caption
+	@extend .inverted-fg-color
+	@extend .inverted-bg-color-translucent
+
+.invert,
+.invert .invert .invert,
+.invert .invert .invert .invert .invert,
+.invert .invert .invert .invert .invert .invert .invert
+	@extend .inverted-fg-color
+	@extend .inverted-bg-color
+	
+	h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
+		@extend .inverted-fg-color
+	
+	.button
+		@extend .standard-fg-color
+		@extend .standard-bg-color
+	
+	.button:hover, .button:focus
+		@extend .inverted-fg-color
+		@extend .inverted-bg-color
+		
+	hr
+		border-color: $bg-color-primary
+	
+	.menu-icon::after, .menu-icon:hover::after
+		background-color: $bg-color-primary
+		box-shadow: 0 7px 0 $bg-color-primary, 0 14px $bg-color-primary
+	
+	.is-drilldown-submenu
+		background-color: $bg-color-primary
+	
+	.is-drilldown-submenu-parent>a::after
+		border-color: transparent transparent transparent $bg-color-primary
+	
+	.js-drilldown-back::before
+		border-color: transparent $bg-color-primary transparent transparent
+	
+	.is-drilldown-submenu a
+		color: $fg-color-primary
+	
+	[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea, select
+		background-color: $fg-color-primary
+		color: $bg-color-primary
+		border-color: $bg-color-primary
+		
+	[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus, select:focus
+		background-color: $bg-color-primary
+		color: $fg-color-primary
+		border-color: $fg-color-primary
+
+	.product .caption
+		@extend .standard-fg-color
+		@extend .standard-bg-color-translucent
+
+
+.invert .invert,
+.invert .invert .invert .invert,
+.invert .invert .invert .invert .invert .invert,
+.invert .invert .invert .invert .invert .invert .invert .invert
+	@extend .standard-fg-color
+	@extend .standard-bg-color
+	
+	h1, h2, h3, h4, h5, h6, a, a:hover, a:visited, a:focus
+		@extend .standard-fg-color
+	
+	.button
+		@extend .inverted-fg-color
+		@extend .inverted-bg-color
+	
+	.button:hover, .button:focus
+		@extend .standard-fg-color
+		@extend .standard-bg-color
+	
+	hr
+		border-color: $fg-color-primary
+	
+	.menu-icon::after, .menu-icon:hover::after
+		background-color: $fg-color-primary
+		box-shadow: 0 7px 0 $fg-color-primary, 0 14px $fg-color-primary
+	
+	.is-drilldown-submenu
+		background-color: $fg-color-primary
+	
+	.is-drilldown-submenu-parent>a::after
+		border-color: transparent transparent transparent $fg-color-primary
+	
+	.js-drilldown-back::before
+		aborder-color: transparent $fg-color-primary transparent transparent
+	
+	.is-drilldown-submenu a
+		color: $bg-color-primary
+	
+	[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea, select
+		background-color: $bg-color-primary
+		color: $fg-color-primary
+		border-color: $fg-color-primary
+		
+	[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus, select:focus
+		background-color: $fg-color-primary
+		color: $bg-color-primary
+		border-color: $bg-color-primary
+
+	.product .caption
+		@extend .inverted-fg-color
+		@extend .inverted-bg-color-translucent
+
+.js-off-canvas-exit
+	background-color: rgba( 0, 0, 0, 0.5 )
+
+
+/* Spacing
+
+@media screen and (min-width:63.9375em)
+	main
+		padding-bottom: $small-spacing
+
+.off-canvas-wrapper
+	margin-bottom: $large-spacing
+
+.no-margin
+	margin: 0 auto
+
+.no-margin-top
+	margin-top: 0
+	
+.no-margin-bottom
+	margin-bottom: 0
+	
+.no-padding
+	padding: 0
+
+.small-margin-bottom
+	margin-bottom: $small-spacing
+	
+.medium-margin-bottom
+	margin-bottom: $medium-spacing
+
+h1, h2, h3, h4, h5, h6
+	line-height: 130%
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	margin-top: $small-spacing
+	margin-bottom: $small-spacing
+
+ul, ol
+	margin-left: $medium-spacing
+	margin-top: 0
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child)
+	float: left
+
+.menu-icon
+	margin: 0.5rem
+
+.menu>li:not(.menu-text)>a
+	margin-left: 1rem
+
+header
+	h1, h2, h3, h4
+		padding: 0
+		margin: 0
+
+header .logo
+	margin-top: $small-spacing
+	margin-bottom: $small-spacing
+
+.text-content
+	max-width: 35rem
+	margin: 0
+
+.text-content h1
+	font-size: 2rem
+
+.address
+	margin-left: $medium-spacing
+	font-weight: bold
+
+
+/* General
+
+.italics
+	font-style: italic
+
+.underline
+	text-decoration: underline
+
+
+/* Products
+
+.thumbnail-image
+	cursor: pointer
+
+.product
+	position: relative
+
+.product .caption
+	position: absolute
+	top: 0
+	text-align: center
+	padding: $small-spacing
+	width: 100%
+	font-size: 1.1rem
+
+
+/* Alignment
+

@@ -1,0 +1,14 @@
+---
+title: 404 Page Not Found
+layout: general
+---
+.row.columns
+  .text-content
+    %h1 #{page.title}
+    .italics
+      %p This page does not exist.
+      %p It is possible that you were looking for a product from the previous catalog.
+      %p
+        In any case, please take a look at the
+        = succeed "." do
+          %a.underline{:href => "/"} new catalog

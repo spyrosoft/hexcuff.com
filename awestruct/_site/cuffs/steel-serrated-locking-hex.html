@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Steel Serrated Locking Hex - Hex Cuff</title>
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="/css/foundation.min.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+        <div class="off-canvas-content invert" data-off-canvas-content="">
+          <div class="float-right" data-toggle="main-navigation">
+            <button class="menu-icon"></button>
+          </div>
+          <header class="row columns">
+            <h1>
+              <a class="float-left logo" href="/">
+                <img alt="Hex Cuff Logo" src="/images/hex-cuff-logo.svg">
+                Hex Cuff
+                <span class="show-for-large">- The World's First</span>
+              </a>
+            </h1>
+          </header>
+          <hr class="no-margin-top show-for-large">
+          <main>
+            <div class="row">
+              <div class="columns large-6">
+                <div class="row collapse product-images">
+                  <div class="columns">
+                    <img alt="Photo of The Guy Magnet" class="main-image" src="/images/cuffs/steel-serrated-locking-hex-front.jpg">
+                  </div>
+                  <div class="columns large-4 medium-4 small-4">
+                    <img alt="Back Photo of The Guy Magnet" class="thumbnail-image" src="/images/cuffs/steel-serrated-locking-hex-back.jpg">
+                  </div>
+                  <div class="columns large-4 medium-4 small-4">
+                    <img alt="Angle Photo of The Guy Magnet" class="thumbnail-image" src="/images/cuffs/steel-serrated-locking-hex-angle.jpg">
+                  </div>
+                  <div class="columns large-4 medium-4 small-4">
+                    <img alt="Model Photo of The Guy Magnet" class="thumbnail-image" src="/images/cuffs/steel-serrated-locking-hex-model.jpg">
+                  </div>
+                </div>
+              </div>
+              <div class="columns large-6">
+                <h1 id="which-cuff">Steel Serrated Locking Hex</h1>
+                <div class="italics">
+                  <h3>Behold the pleated face.</h3>
+                  <p>
+                    With the additional surface area to hold against your ear, this cuff is especially comfortable.
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="columns large-4 medium-4 small-6">
+                    <label>
+                      Slot Size:
+                      <select id="slot-size">
+                        <option value="Small">Small</option>
+                        <option selected="selected" value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="columns large-4 medium-4 small-6">
+                    <label>
+                      Which Ear:
+                      <select id="which-ear">
+                        <option value="Left">Left</option>
+                        <option value="Right">Right</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="columns large-4 medium-4 small-6">
+                    <label>
+                      Quantity:
+                      <input id="quantity" min="1" type="number" value="1">
+                    </label>
+                  </div>
+                </div>
+                <div class="row columns">
+                  <h4>
+                    Total: $<span id="total">8</span></h4>
+                  <input id="price" type="hidden" value="8">
+                  <div class="text-center">
+                    <button class="button checkout large">Purchase</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="off-canvas position-right" data-off-canvas="" data-position="right" id="main-navigation">
+          <div class="row columns">
+            <h3>
+              <a href="/">Hex Cuff</a>
+            </h3>
+            <h6>The World's First</h6>
+            <hr>
+          </div>
+          <ul class="vertical menu" data-drilldown="">
+            <li>
+              <a href="/">Catalog</a>
+            </li>
+            <li>
+              <a href="/about-us/">About Us</a>
+            </li>
+            <li>
+              <a href="/contact-us/">Contact Us</a>
+            </li>
+            <li>
+              <a href="/cuff-size/">Cuff Size</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/what-input.min.js"></script>
+    <script src="/js/utilities.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/js/product.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

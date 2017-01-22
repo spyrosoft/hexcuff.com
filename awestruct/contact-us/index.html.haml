@@ -1,0 +1,26 @@
+---
+title: Contact Us
+layout: general
+script: /js/contact-us.js
+---
+.row.columns
+  %h1 #{page.title}
+%form#contact-form{:action => "/contact-us-ajax/", :method => "post", :target => "_blank"}
+  .row
+    .columns.medium-6.large-6
+      %label
+        Name
+        %input{:name => "name", :type => "text"}/
+    .columns.medium-6.large-6
+      %label
+        Email
+        %input{:name => "email", :type => "email"}/
+    .columns
+      %label
+        Message
+        %sup (Required)
+        %textarea{:cols => "40", :name => "message", :rows => "10"}
+    .columns.text-center
+      %button.button{:type => "submit"} Submit
+  :javascript
+    document.getElementsByName( 'name' )[ 0 ].focus();

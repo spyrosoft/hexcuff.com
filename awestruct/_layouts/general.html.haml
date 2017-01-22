@@ -1,0 +1,54 @@
+!!!
+%html.no-js{:lang => 'en-US'}
+  %head
+    %meta{:content => 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
+    %meta{:charset => 'utf-8'}
+    %meta{:content => 'ie=edge', 'http-equiv' => 'x-ua-compatible'}
+    %meta{:content => 'width=device-width, initial-scale=1', :name => 'viewport'}
+    %title #{page.title} - #{site.title}
+    %link{:href => '/images/favicon.ico', :rel => 'shortcut icon'}
+    -if page.description
+      %meta{name: 'description', content: page.description}
+    %link{:href => '/css/foundation.min.css', :rel => 'stylesheet'}
+    %link{:href => '/css/app.css', :rel => 'stylesheet'}
+  %body
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner{'data-off-canvas-wrapper' => ''}
+        .off-canvas-content.invert{'data-off-canvas-content' => ''}
+          .float-right{'data-toggle' => 'main-navigation'}
+            %button.menu-icon
+          %header.row.columns
+            %h1
+              %a.float-left.logo{:href => '/'}
+                %img{:alt => 'Hex Cuff Logo', :src => '/images/hex-cuff-logo.svg'}
+                Hex Cuff
+                %span.show-for-large - The World's First
+          %hr.no-margin-top.show-for-large
+          %main
+            ~ content
+        #main-navigation.off-canvas.position-right{'data-off-canvas' => '', 'data-position' => 'right'}
+          .row.columns
+            %h3
+              %a{href: '/'} Hex Cuff
+            %h6 The World's First
+            %hr
+          %ul.vertical.menu{'data-drilldown' => ''}
+            %li
+              %a{:href => '/'} Catalog
+            %li
+              %a{:href => '/about-us/'} About Us
+            %li
+              %a{:href => '/contact-us/'} Contact Us
+            %li
+              %a{:href => '/cuff-size/'} Cuff Size
+    %script{:src => '/js/jquery.min.js'}
+    %script{:src => '/js/what-input.min.js'}
+    %script{:src => '/js/utilities.js'}
+    %script{:src => '/js/foundation.min.js'}
+    -if page.script
+      %script{src: page.script}
+    -if page.product
+      %script{:src => 'https://checkout.stripe.com/checkout.js'}
+      %script{:src => '/js/product.js'}
+    :javascript
+      $(document).foundation();

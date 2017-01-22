@@ -8,12 +8,11 @@ SHIPPING-CITY, SHIPPING-STATE SHIPPING-ZIP
 
 The total came out to $ORDER-TOTAL.
 
-I would love to hear from you. If you would like to:
-* Give feedback for ways the site could be better.
-* Share any other comments, questions or ideas.
-* (My favorite) Just say hi! It makes a huge difference to be able to connect with you.
+I am ecstatic that you bought a Hex Cuff!
 
-Hit reply and we'll get your message.
+I would love to hear from you. If you would like to just say hi, that would be great! It makes a huge difference to me to be able to connect with my customers.
+
+Hit reply and I'll respond to your message.
 
 Thank you sincerely,
 
