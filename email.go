@@ -13,7 +13,7 @@ func sendEmail(recipientAddress string, subject string, messageBody string) {
 		log.Panic("Outgoing email credentials have not been set. Cannot send message.")
 	}
 
-	from := mail.Address{siteData.NoReplyAddressName, siteData.NoReplyAddress}
+	from := mail.Address{Name: siteData.NoReplyAddressName, Address: siteData.NoReplyAddress}
 
 	headers := make(map[string]string)
 	headers["From"] = from.String()
