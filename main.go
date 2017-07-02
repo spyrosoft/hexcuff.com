@@ -34,7 +34,7 @@ func main() {
 	router.POST("/notify-admin-ajax/", notifyAdminSubmission)
 	router.POST("/new-order-ajax/", newOrderSubmission)
 	router.NotFound = http.HandlerFunc(requestCatchAll)
-	log.Fatal(http.ListenAndServe(":8087", router))
+	log.Fatal(http.ListenAndServe(":8085", router))
 }
 
 func debug(things ...interface{}) {
